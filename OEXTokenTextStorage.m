@@ -13,6 +13,8 @@
     NSMutableAttributedString *_string;
 }
 
+@synthesize delegate=_delegate;
+
 #pragma mark - init
 
 - (id)initWithAttributedString:(NSAttributedString *)attrStr
