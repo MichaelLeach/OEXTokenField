@@ -19,7 +19,10 @@
 /** The token field cell's delegate.
  @discussion The delegate must adopt the `<OEXTokenFieldCellDelegate>` protocol.
  */
-@property(nonatomic, assign) id <OEXTokenFieldCellDelegate> delegate;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-property-type"
+@property(assign) id <OEXTokenFieldCellDelegate> delegate;
+#pragma clang diagnostic pop
 
 /** @name Displaying Tokenized Attachment Cells */
 

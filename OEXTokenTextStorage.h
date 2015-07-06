@@ -14,7 +14,10 @@
  */
 @interface OEXTokenTextStorage : NSTextStorage
 
-@property(nonatomic, weak) id <OEXTokenTextStorageDelegate> delegate;
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wincompatible-property-type"
+@property(weak) id <OEXTokenTextStorageDelegate> delegate;
+#pragma clang diagnostic pop
 
 - (id)initWithAttributedString:(NSAttributedString *)attrStr;
 
