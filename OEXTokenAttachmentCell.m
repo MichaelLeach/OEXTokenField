@@ -77,12 +77,12 @@ static CGFloat const kOEXTokenAttachmentTokenMargin = 3;
 
 - (void)drawWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    [self drawWithFrame:cellFrame inView:controlView characterIndex:NSNotFound layoutManager:nil];
+    [self drawWithFrame:cellFrame inView:controlView characterIndex:NSNotFound layoutManager:[NSLayoutManager new]];
 }
 
 - (void)drawInteriorWithFrame:(NSRect)cellFrame inView:(NSView *)controlView
 {
-    [self drawWithFrame:cellFrame inView:controlView characterIndex:NSNotFound layoutManager:nil];
+    [self drawWithFrame:cellFrame inView:controlView characterIndex:NSNotFound layoutManager:[NSLayoutManager new]];
 }
 
 - (void)drawTokenWithFrame:(NSRect)rect inView:(NSView *)controlView
